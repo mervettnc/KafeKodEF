@@ -150,8 +150,10 @@ namespace KafeKod
             {
                 var seciliSatir = dgvSiparisDetaylari.SelectedRows[0];
                 var sipDetay = (SiparisDetay)seciliSatir.DataBoundItem;
-                siparis.SiparisDetaylar.Remove(sipDetay);
+                db.SiparisDetaylar.Remove(sipDetay);
                 db.SaveChanges();
+                dgvSiparisDetaylari.DataSource = new BindingSource(siparis.SiparisDetaylar,null);
+
             }
 
             TutarGuncelle();
