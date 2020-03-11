@@ -46,6 +46,9 @@
             this.lblOdemeTutari = new System.Windows.Forms.Label();
             this.cboMasaNo = new System.Windows.Forms.ComboBox();
             this.btnTasi = new System.Windows.Forms.Button();
+            this.UrunAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BirimFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSiparisDetaylari)).BeginInit();
             this.cmsSiparisDetay.SuspendLayout();
@@ -109,6 +112,10 @@
             this.dgvSiparisDetaylari.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSiparisDetaylari.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSiparisDetaylari.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSiparisDetaylari.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UrunAd,
+            this.Adet,
+            this.BirimFiyat});
             this.dgvSiparisDetaylari.Location = new System.Drawing.Point(12, 74);
             this.dgvSiparisDetaylari.Name = "dgvSiparisDetaylari";
             this.dgvSiparisDetaylari.ReadOnly = true;
@@ -246,6 +253,27 @@
             this.btnTasi.UseVisualStyleBackColor = true;
             this.btnTasi.Click += new System.EventHandler(this.btnTasi_Click);
             // 
+            // UrunAd
+            // 
+            this.UrunAd.DataPropertyName = "UrunAd";
+            this.UrunAd.HeaderText = "Ürün Adı";
+            this.UrunAd.Name = "UrunAd";
+            this.UrunAd.ReadOnly = true;
+            // 
+            // Adet
+            // 
+            this.Adet.DataPropertyName = "Adet";
+            this.Adet.HeaderText = "Adet";
+            this.Adet.Name = "Adet";
+            this.Adet.ReadOnly = true;
+            // 
+            // BirimFiyat
+            // 
+            this.BirimFiyat.DataPropertyName = "BirimFiyat";
+            this.BirimFiyat.HeaderText = "Birim Fiyat";
+            this.BirimFiyat.Name = "BirimFiyat";
+            this.BirimFiyat.ReadOnly = true;
+            // 
             // SiparisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -298,5 +326,8 @@
         private System.Windows.Forms.Button btnTasi;
         private System.Windows.Forms.ContextMenuStrip cmsSiparisDetay;
         private System.Windows.Forms.ToolStripMenuItem tsmiSiparisDetaySil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UrunAd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Adet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BirimFiyat;
     }
 }
