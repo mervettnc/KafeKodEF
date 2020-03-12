@@ -38,7 +38,7 @@ namespace KafeKod
             il.ImageSize = new Size(64, 64);
             lvwMasalar.LargeImageList = il;
             #endregion
-
+            lvwMasalar.Items.Clear();
             ListViewItem lvi;
             for (int i = 1; i <=Properties.Settings.Default.MasaAdet; i++)
             {
@@ -147,6 +147,16 @@ namespace KafeKod
                 }
             }
             return null;
+        }
+
+        private void tsmiAyarlar_Click(object sender, EventArgs e)
+        {
+            var frm = new Ayarlar();
+            DialogResult dr = frm.ShowDialog();
+            if (dr==DialogResult.OK)
+            {
+                MasalariOlustur();
+            }
         }
     }
 }
